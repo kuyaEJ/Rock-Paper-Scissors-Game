@@ -164,4 +164,5 @@ This project was completed as part of the CS 1010 curriculum at CSULA. It emphas
 - Linking simple UI elements (textboxes and images) to the code logic.
 
 ## Credits
-Final Project from CS 1010 by Group 10: Kyle Chau, Micheal Buna, and Erick Vergara
+Final Project (rps.py) submitted from CS 1010 by Group 10: Kyle Chau, Micheal Buna, and Erick Vergara
+(New commits are made by Erick)

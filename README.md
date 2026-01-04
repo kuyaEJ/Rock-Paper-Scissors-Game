@@ -162,3 +162,6 @@ This project was completed as part of the CS 1010 curriculum at CSULA. It emphas
 - Using conditional statements for game rules.
 - Managing and updating variables (scores).
 - Linking simple UI elements (textboxes and images) to the code logic.
+
+## Credits
+Final Project from CS 1010 by Group 10: Kyle Chau, Micheal Buna, and Erick Vergara

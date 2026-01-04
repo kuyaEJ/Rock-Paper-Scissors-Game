@@ -152,7 +152,7 @@ cd "Rock Paper Scissors Game"
 
 3. Run the script with the command:
 ```Python
-python rps.py
+python main.py
 ```
 
 For other languages the compilers use different commands such as: `javac Game.java` & `java Game`)

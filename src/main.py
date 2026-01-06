@@ -1,5 +1,5 @@
-from RPSLogic import GameLogic
-from RPSWindow import Window
+from rockpaperscissors.RPSLogic import GameLogic
+from rockpaperscissors.RPSWindow import Window
 
 print("Launching", __name__)
 # __main__ is the interactive environment

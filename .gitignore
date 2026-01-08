@@ -1,0 +1,9 @@
+# Ignore the tnire pycache folder
+/src/components/__pycache__
+
+# Ignore my private build/dist folders
+dist/
+build/
+
+# Ignore secret scripts
+my_private_scripts/

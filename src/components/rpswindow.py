@@ -1,4 +1,3 @@
-# %%
 import random
 import tkinter as tk
 import os
@@ -43,9 +42,9 @@ class Window:
         # Defining Assets and States
         self.assets = {
             'images': [
-                tk.PhotoImage(file="././assets/rock.png").subsample(2),
-                tk.PhotoImage(file="././assets/paper.png").subsample(2),
-                tk.PhotoImage(file="././assets/scissor.png").subsample(2)
+                tk.PhotoImage(file="src/assets/rock.png").subsample(2),
+                tk.PhotoImage(file="src/assets/paper.png").subsample(2),
+                tk.PhotoImage(file="src/assets/scissor.png").subsample(2)
             ],
             'names': ['rock', 'paper', 'scissor']
         }
@@ -122,4 +121,3 @@ class Window:
        
         # Grid MainFrame and Create Main Application Loop 
         self.mainframe.grid_columnconfigure(1, weight=1)
-# %%

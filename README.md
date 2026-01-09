@@ -20,7 +20,7 @@ This is a classic **Rock Paper Scissors** game developed for my **CS 1010: Intro
 - `README.md`: Project description and credits
 - `rps.py`: Original source code of the core game in a single file.
 - `main.py`: Program's main launcher
-- `RPSLogic.py`: Handler for scoring `logic` and round results
+- `RPSLogic.py`: Handler for scoring logic and round results
 - `RPSWindow.py`: Handler for `tkinter` and app UI's layout, colors, buttons, and labels
 
 ## 🚀 How to Run

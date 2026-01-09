@@ -1,4 +1,3 @@
-# %%
 import random
 import tkinter as tk
 import os
@@ -40,17 +39,12 @@ class Window:
 
 
     def load_resources(self):
-        # Get directory of the file executed and changes the current directory to where the Python file is at
-        current_dir = Path('.').resolve()
-        
-
-
         # Defining Assets and States
         self.assets = {
             'images': [
-                tk.PhotoImage(file="rock.png").subsample(2),
-                tk.PhotoImage(file="paper.png").subsample(2),
-                tk.PhotoImage(file="scissor.png").subsample(2)
+                tk.PhotoImage(file="src/assets/rock.png").subsample(2),
+                tk.PhotoImage(file="src/assets/paper.png").subsample(2),
+                tk.PhotoImage(file="src/assets/scissor.png").subsample(2)
             ],
             'names': ['rock', 'paper', 'scissor']
         }
@@ -127,4 +121,3 @@ class Window:
        
         # Grid MainFrame and Create Main Application Loop 
         self.mainframe.grid_columnconfigure(1, weight=1)
-# %%

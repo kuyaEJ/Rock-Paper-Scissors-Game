@@ -33,7 +33,7 @@ git clone https://github.com/kuyaEJ/Rock-Paper-Scissors-Game.git
 2. Open the project in your code editor or open a command line. Navigate to the folder:
 
 ```Bash
-cd "Rock Paper Scissors Game"
+cd "Rock-Paper-Scissors-Game"
 ```
 
 3. Run the script with the command:

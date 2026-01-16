@@ -5,20 +5,25 @@ from pathlib import Path
 from contextlib import contextmanager
 
 class Window:
-    def __init__(self, logic):
+    def __init__(self, title, size):
+        self.title = title
+        self.size = size
+    
+    def launch(self, logic):
         self.logic = logic
         self.setup_window()
         self.setup_layout()
         self.load_resources()
         self.create_widgets()
         self.grid()
+        self.window.mainloop()
 
 
 
     def setup_window(self):
         self.window = tk.Tk()
-        self.window.title("Rock Paper Scissors")
-
+        self.window.geometry(self.size)
+        self.window.title(self.title)
 
 
     def setup_layout(self):
@@ -26,13 +31,13 @@ class Window:
         self.mainframe = tk.Frame(self.window, border=3)
         self.mainframe.pack(side=tk.TOP)
 
-        # Display Window
+        # Display Label
         self.label = tk.Label(self.mainframe, text="Try to win against the Computer")
         
         # Bottom Frame
         self.botFrame = tk.Frame(self.window, border=3)
         self.botFrame.pack(side=tk.BOTTOM)
-        # Computer And User Frames
+        # Computer And User Labels
         self.labeluser = tk.Label(self.botFrame, padx=60, pady=60, relief=tk.SUNKEN, bg="#221FFE")
         self.labelcomputer = tk.Label(self.botFrame, padx=60, pady=60, relief=tk.SUNKEN, bg="#FE1F34")
 
@@ -40,6 +45,8 @@ class Window:
 
     def load_resources(self):
         # Defining Assets and States
+        # IMPORTANT: Do not change the order of items since are dependent tables
+        # TO-DO: Find solution of tables being dependent since it is risky
         self.assets = {
             'images': [
                 tk.PhotoImage(file="src/assets/rock.png").subsample(2),

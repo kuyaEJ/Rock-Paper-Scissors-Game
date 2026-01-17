@@ -21,7 +21,17 @@ This is a classic **Rock Paper Scissors** game developed for my **CS 1010: Intro
 <img width="1115" height="154" alt="Game Ends on application close" src="https://github.com/user-attachments/assets/dd1db303-ee9b-4b63-b856-1682ea8c640f" /><br/>
 
 ## EasyGP Methods<br/>
-### Add_input
+### Setup_window<br/>
+<img width="1105" height="615" alt="setup_window" src="https://github.com/user-attachments/assets/018466b8-93c8-418f-beb4-a0e6969afbb7" /><br/>
+### Add_button<br/>
+<img width="744" height="212" alt="add_button" src="https://github.com/user-attachments/assets/1b83f2c9-384e-4cc2-91d4-e03f13755ede" /><br/>
+### Add_frame<br/>
+<img width="809" height="236" alt="add_frame" src="https://github.com/user-attachments/assets/23f83317-d2c3-4590-98d2-44f491af214b" /><br/>
+### Add_label<br/>
+<img width="466" height="172" alt="add_label" src="https://github.com/user-attachments/assets/f605ee64-c591-4517-9492-8b90a37201e5" /><br/>
+### Add_text<br/>
+<img width="606" height="177" alt="add_text" src="https://github.com/user-attachments/assets/f164b0a9-ca26-4281-8d52-1734e9ad59f0" /><br/>
+### Add_input<br/>
 <img width="219" height="168" alt="add_input and add_button1" src="https://github.com/user-attachments/assets/19a76d9f-4ff1-4756-907a-5f9ed7e25e3c" /><br/>
 
 ## 🛠️ Built With
@@ -31,12 +41,15 @@ This is a classic **Rock Paper Scissors** game developed for my **CS 1010: Intro
 - **Assets**: Simple image files for Rock, Paper, and Scissors sourced from Google Images. (`rock.png`, `paper.png`, `scissors.png`).
 
 ## 📂 File Structure
-- `rock.png:`, `paper.png`, `scissor.png`: Visual assets for the game choices
+- `rock.png:`, `paper.png`, `scissor.png`: Visual choices stored in `src/assets`
 - `README.md`: Project description and credits
-- `rps.py`: Original source code of the core game in a single file.
-- `main.py`: Program's main launcher
-- `RPSLogic.py`: Handler for scoring logic and round results
-- `RPSWindow.py`: Handler for `tkinter` and app UI's layout, colors, buttons, and labels
+- `rps.py`: Original source code of the core game in a single file (version 0).
+- `main.py`: Program's launcher for version 1 separating original source code into `rpswindow.py` and `rpsgame.py`
+- `mainv2.py`: Program's launcher for version 2 which implements `easygp.py`
+- `rpsgame.py`: Handler for scoring logic and round results for `mainv2.py`
+- `rpswindow.py`: Handler for `tkinter` and app UI's layout, colors, buttons, and labels
+- `easygp.py`: EasyGridPacker managing UI from tkinter
+- `rpswindoweasygp`: UI implementing the EasyGridPacker
 
 ## 🚀 How to Run
 1. Download or clone the repository:
@@ -56,7 +69,8 @@ cd "Rock-Paper-Scissors-Game"
 python src/main.py
 ```
 
-For other languages the compilers use different commands such as: `javac Game.java` & `java Game`)
+4. Test and compare the other versions of the application with `launch_compare.bat`
+
 
 ## 🎓 Academic Context
 This project was completed as part of the CS 1010 curriculum at CSULA. It emphasizes:

@@ -17,19 +17,24 @@ class EasyGridPacker:
         frame.pack(fill="x", padx=padx, pady=pady)
         return entry
     
-    def add_button(self, btn_text, command):
-        btn = tk.Button(self.root, text=btn_text, command=command)
-        btn.pack(pady=10)
+    def add_button(self, frame, command, text="", c=0, r=0, **kwargs):
+        btn = tk.Button(frame, command=command, text=text, **kwargs)
+        btn.grid(column=c, row=r)
         return btn
     
-    def add_frame(self, side=tk.TOP, border=3):
-        frame = tk.Frame(self.root, border=border)
+    def add_frame(self, side=tk.TOP, border=3, **kwargs):
+        frame = tk.Frame(self.root, border=border, **kwargs)
         frame.pack(side=side)
         return frame
     
-    def add_label(self, frame, text="",  c=0, r=0, padx=0, pady=0, relief=tk.SUNKEN, bg="#FFFFFF"):
-        label = tk.Label(frame, text=text, padx=padx, pady=pady, relief=relief, bg=bg)
+    def add_label(self, frame, text="",  c=0, r=0, padx=0, pady=0, relief=tk.FLAT, **kwargs):
+        label = tk.Label(frame, text=text, padx=padx, pady=pady, relief=relief, **kwargs)
         label.grid(column = c, row = r)
         return label
+    
+    def add_text(self, frame,  c=0, r=0,height=24, width=80, **kwargs):
+        text = tk.Text(frame, height=height, width=width, **kwargs)
+        text.grid(column=c, row=r)
+        return text
 
 # egp = EasyGridPacker()

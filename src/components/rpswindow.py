@@ -37,8 +37,11 @@ class Window:
         # Bottom Frame
         self.botFrame = tk.Frame(self.window, border=3)
         self.botFrame.pack(side=tk.BOTTOM)
-        # Computer And User Labels
+        # User Label
         self.labeluser = tk.Label(self.botFrame, padx=60, pady=60, relief=tk.SUNKEN, bg="#221FFE")
+        # Create and Grid the Results Display
+        self.result_display = tk.Text(master=self.botFrame, height=12, width=30, bg="#FFDAC1")
+        # Computer Label
         self.labelcomputer = tk.Label(self.botFrame, padx=60, pady=60, relief=tk.SUNKEN, bg="#FE1F34")
 
 
@@ -47,11 +50,15 @@ class Window:
         # Defining Assets and States
         # IMPORTANT: Do not change the order of items since are dependent tables
         # TO-DO: Find solution of tables being dependent since it is risky
+        current_script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(current_script_dir)
+        assets_path = os.path.join(project_root, "assets")
+
         self.assets = {
             'images': [
-                tk.PhotoImage(file="src/assets/rock.png").subsample(2),
-                tk.PhotoImage(file="src/assets/paper.png").subsample(2),
-                tk.PhotoImage(file="src/assets/scissor.png").subsample(2)
+                tk.PhotoImage(file=os.path.join(assets_path, "rock.png"), master=self.window).subsample(2),
+                tk.PhotoImage(file=os.path.join(assets_path, "paper.png"), master=self.window).subsample(2),
+                tk.PhotoImage(file=os.path.join(assets_path, "scissor.png"), master=self.window).subsample(2)
             ],
             'names': ['rock', 'paper', 'scissor']
         }
@@ -63,8 +70,7 @@ class Window:
 
     def play(self, user_choice):
 
-        # Shorten variables
-        assets = self.assets
+        # Computer chooses randomly between rock, paper, or scissors
         computer_choice = random.choice([0,1,2])
         
         # Update scores and let the computer choose a random choice
@@ -77,7 +83,7 @@ class Window:
         # Considering logging in a different way with decorator functions
         print(result_text, "Winner:", winner)
 
-        self.labeluser.configure(image=assets['images'][user_choice])
+        self.labeluser.configure(image=self.assets['images'][user_choice])
         self.labelcomputer.configure(image=self.assets['images'][computer_choice])
 
         # Clear result display then insert new score and display feed
@@ -85,8 +91,8 @@ class Window:
         self.result_display.insert(
             tk.END, 
             f"Round {self.logic.round} \n" +
-            f"Your chosen: {assets['names'][user_choice]} \n" + 
-            f"Computer's chosen: {assets['names'][computer_choice]} \n" +
+            f"Your chosen: {self.assets['names'][user_choice]} \n" + 
+            f"Computer's chosen: {self.assets['names'][computer_choice]} \n" +
             f"Your Score: {us} \n Computer Score: {cs}\n\n"
         )
 
@@ -94,9 +100,6 @@ class Window:
 
 
     def create_widgets(self):
-
-        # Create and Grid the Results Display
-        self.result_display = tk.Text(master=self.botFrame, height=12, width=30, bg="#FFDAC1")
         self.result_display.grid(column=1, row=1)
 
         # Create buttons and place them in table
@@ -114,7 +117,7 @@ class Window:
     def grid(self):
 
         # Grid Top Frame
-        self.mainframe.pack(side=tk.TOP)
+        # self.mainframe.pack(side=tk.TOP)
         self.label.grid(column=2, row=0)
 
         # Grid Buttons
@@ -122,7 +125,7 @@ class Window:
             self.ui[name].grid(column=i+1, row=1)
 
         # Grid User and Computer Labels
-        self.botFrame.pack(side=tk.BOTTOM)
+        # self.botFrame.pack(side=tk.BOTTOM)
         self.labeluser.grid(column = 0, row = 1)
         self.labelcomputer.grid(column = 2, row = 1)
        

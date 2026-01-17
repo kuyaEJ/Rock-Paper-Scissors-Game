@@ -1,11 +1,11 @@
 from components.rpsgame import GameLogic
-from components.rpswindow import Window as rpswindowv1
+from components.rpswindoweasygp import Window as rpswindowv2
 
 print("Launching", __name__)
 # __main__ is the interactive environment
 # main is the command line environment
 if __name__ == "__main__" or __name__ == "main":
-    appv1 = rpswindowv1("Rock Paper Scissors Game version: 1", "800x600")
+    appv2 = rpswindowv2("Rock Paper Scissors Game version: 2", "800x600")
     logic = GameLogic()
-    appv1.launch(logic)
+    appv2.launch(logic)
     print("Launched main python")

@@ -4,13 +4,19 @@ import tkinter as tk
 import os
 
 window = tk.Tk()
-window.title("RPS Game")
+window.title("RPS Game Original Version")
 
 userscore = 0
 compscore = 0
 uc = ""
 cc = "" 
 
+# Get directory of the file executed and changes the current directory to where the Python file is at
+current_script_dir = os.path.dirname(os.path.abspath(__file__))
+# project_root = os.path.dirname(current_script_dir)
+assets_path = os.path.join(current_script_dir, "assets")
+
+# Logic RPS
 def cton(chosen):
     r = {'rock':0,'paper':1,'scissor':2}
     return r[chosen]
@@ -49,7 +55,7 @@ def rock():
     uc='rock'
     cc=randomcomp()
     ui=im2Rock
-    ci = tk.PhotoImage(file=(cc + ".png")).subsample(2)
+    ci = tk.PhotoImage(file=os.path.join(assets_path,(cc + ".png"))).subsample(2)
     result(uc,cc, ui, ci)
 def paper():
     global uc
@@ -59,7 +65,7 @@ def paper():
     uc='paper'
     cc=randomcomp()
     ui=im2Paper
-    ci = tk.PhotoImage(file=(cc + ".png")).subsample(2)
+    ci = tk.PhotoImage(file=os.path.join(assets_path,(cc + ".png"))).subsample(2)
     result(uc,cc, ui, ci)
 def scissor():
     global uc
@@ -69,19 +75,16 @@ def scissor():
     uc='scissor'
     cc=randomcomp()
     ui=im2Scissors
-    ci = tk.PhotoImage(file=(cc + ".png")).subsample(2)
+    ci = tk.PhotoImage(file=os.path.join(assets_path,(cc + ".png"))).subsample(2)
     result(uc,cc, ui, ci)
 
-# Get directory of the file executed and changes the current directory to where the Python file is at
-directory = os.path.dirname(os.path.realpath(__file__))
-os.chdir(directory)
 
 # Images
-imROCK = tk.PhotoImage(file="rock.png")
+imROCK = tk.PhotoImage(file=os.path.join(assets_path, "rock.png"))
 im2Rock = imROCK.subsample(2)
-imPAPER = tk.PhotoImage(file="paper.png")
+imPAPER = tk.PhotoImage(file=os.path.join(assets_path, "paper.png"))
 im2Paper = imPAPER.subsample(2)
-imSCISSORS = tk.PhotoImage(file="scissor.png")
+imSCISSORS = tk.PhotoImage(file=os.path.join(assets_path, "scissor.png"))
 im2Scissors = imSCISSORS.subsample(2)
 
 

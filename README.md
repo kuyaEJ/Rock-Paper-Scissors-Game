@@ -9,6 +9,21 @@ This is a classic **Rock Paper Scissors** game developed for my **CS 1010: Intro
 - **Score Tracking**: The game tracks wins and losses and updates the score after each round.
 - **Display**: A simple textbox updates to show who won the round and the current score.
 
+## Application Running
+
+### Initial Game State<br/>
+<img width="500" height="395" alt="Initial Game State" src="https://github.com/user-attachments/assets/6eaa1d80-929d-4286-934f-6a6975748b48" /><br/>
+### Round 1<br/>
+<img width="516" height="395" alt="Round 1" src="https://github.com/user-attachments/assets/0fee51ff-5dd4-4b5a-ac1c-8f86bb53406d" /><br/>
+### Round 2<br/>
+<img width="516" height="395" alt="Round 2" src="https://github.com/user-attachments/assets/762c1955-db23-4bd2-80d5-a04a29f0071e" /><br/>
+### Command Prompt - Game History<br/>
+<img width="1115" height="154" alt="Game Ends on application close" src="https://github.com/user-attachments/assets/dd1db303-ee9b-4b63-b856-1682ea8c640f" /><br/>
+
+## EasyGP Methods<br/>
+### Add_input
+<img width="219" height="168" alt="add_input and add_button1" src="https://github.com/user-attachments/assets/19a76d9f-4ff1-4756-907a-5f9ed7e25e3c" /><br/>
+
 ## 🛠️ Built With
 - **Programming Language**: `Python`
 - **Libraries/Tools**: `tkinter`, `os`, `random`, 

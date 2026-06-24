@@ -8,6 +8,7 @@
 start pythonw rps.py
 start pythonw main.py
 start pythonw mainv2.py
+:: To debug and see command prompt change from pythonw execution to python
 
 :: Pause main launcher window
 echo All versions launched. 
@@ -20,4 +21,5 @@ echo This shows making libraries and multiple files for projects is only best do
 echo Over complicating a project's architecture can increase workload and reduce efficiency for projects but if readability is more important it might be worth doing.
 echo A general guideline is to not change the architecture of the project outside of a single file if it doesn't get used more than 3 times.
 echo Press any key to close this launcher...
-pause
+:: pause
+:: To debug remove comment so you can see terminal 

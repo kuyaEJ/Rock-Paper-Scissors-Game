@@ -5,9 +5,9 @@
 :: Run the scripts from inside src
 :: start cmd /k python main.py
 :: start cmd /k python mainv2.py
-start python rps.py
-start python main.py
-start python mainv2.py
+start pythonw rps.py
+start pythonw main.py
+start pythonw mainv2.py
 
 :: Pause main launcher window
 echo All versions launched. 

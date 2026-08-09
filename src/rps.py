@@ -42,7 +42,7 @@ def result(userc,cc, ui, ci):
         compscore+=1
     text_area = tk.Text(master=botFrame,height=12,width=30,bg="#FFDAC1")
     text_area.grid(column=1,row=1)
-    answer = "Your chosen: {uc} \nComputer's chosen : {cc} \n Your Score : {u} \n Computer Score : {c} ".format(uc=uc,cc=cc,u=userscore,c=compscore)
+    answer = "Your choice: {uc} \nComputer's choice : {cc} \n Your Score : {u} \n Computer Score : {c} ".format(uc=uc,cc=cc,u=userscore,c=compscore)
     text_area.insert(tk.END,answer)
     Label_User.configure(image=ui)# User Image
     Label_Computer.configure(image=ci)# Computer Image

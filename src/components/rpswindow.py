@@ -24,6 +24,7 @@ class Window:
         self.window = tk.Tk()
         self.window.geometry(self.size)
         self.window.title(self.title)
+        # self.window.configure(bg="#FFFFFF")
 
 
     def setup_layout(self):
@@ -40,7 +41,7 @@ class Window:
         # User Label
         self.labeluser = tk.Label(self.botFrame, padx=60, pady=60, relief=tk.SUNKEN, bg="#221FFE")
         # Create and Grid the Results Display
-        self.result_display = tk.Text(master=self.botFrame, height=12, width=30, bg="#FFDAC1")
+        self.result_display = tk.Text(master=self.botFrame, height=12, width=30, bg="#FFDAC1", fg="#000000")
         # Computer Label
         self.labelcomputer = tk.Label(self.botFrame, padx=60, pady=60, relief=tk.SUNKEN, bg="#FE1F34")
 
@@ -91,9 +92,9 @@ class Window:
         self.result_display.insert(
             tk.END, 
             f"Round {self.logic.round} \n" +
-            f"Your chosen: {self.assets['names'][user_choice]} \n" + 
-            f"Computer's chosen: {self.assets['names'][computer_choice]} \n" +
-            f"Your Score: {us} \n Computer Score: {cs}\n\n"
+            f"Your choice: {self.assets['names'][user_choice]} \n" + 
+            f"Computer's choice: {self.assets['names'][computer_choice]} \n" +
+            f"Your Score: {us} \nComputer Score: {cs}\n\n"
         )
 
 

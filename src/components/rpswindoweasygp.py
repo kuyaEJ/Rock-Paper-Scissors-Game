@@ -82,9 +82,9 @@ class Window:
         self.result_display.insert(
             tk.END,
             f"Round {self.logic.round} \n" +
-            f"Your chosen: {assets['names'][user_choice]} \n" +
-            f"Computer's chosen: {assets['names'][computer_choice]} \n" +
-            f"Your Score: {us} \n Computer Score: {cs}\n\n"
+            f"Your choice: {assets['names'][user_choice]} \n" +
+            f"Computer's choice: {assets['names'][computer_choice]} \n" +
+            f"Your Score: {us} \nComputer Score: {cs}\n\n"
         )
 
 

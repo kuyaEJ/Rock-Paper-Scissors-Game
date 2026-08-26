@@ -1,6 +1,9 @@
 # Ignore the tnire pycache folder
 /src/components/__pycache__
 
+# Ignore virtualenvironment
+.venv
+
 # Ignore my private build/dist folders
 dist/
 build/
